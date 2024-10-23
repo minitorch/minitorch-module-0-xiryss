@@ -21,6 +21,9 @@ class Graph:
 
 
 def simple(N):
+    """
+    Classifies points with respect to line x = 0.5
+    """
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -30,6 +33,9 @@ def simple(N):
 
 
 def diag(N):
+    """
+    Classifies points with respect to line x + y = 0.5
+    """
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -39,6 +45,9 @@ def diag(N):
 
 
 def split(N):
+    """
+    Classifies point to class 0, if it is between lines x = 0.2, x = 0.8, otherwise to class 1
+    """
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -48,6 +57,9 @@ def split(N):
 
 
 def xor(N):
+    """
+    Classifies point to class 1, if it is in 2-nd or 4-th quadrant, otherwise 0
+    """
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -57,6 +69,9 @@ def xor(N):
 
 
 def circle(N):
+    """
+    Classifies points according to their relation to circle centered at (0.5,0.5) with certain radius
+    """
     X = make_pts(N)
     y = []
     for x_1, x_2 in X:
@@ -68,6 +83,9 @@ def circle(N):
 
 def spiral(N):
 
+    """
+    Classifies points according to their relation to some spiral.
+    """
     def x(t):
         return t * math.cos(t) / 20.0
 
